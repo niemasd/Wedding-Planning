@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 from csv import reader
-from sys import argv
+from sys import argv, stderr
 
 # main function
 if __name__ == "__main__":
     # check usage
     if len(argv) != 3:
-        print("USAGE: %s <input_guestlist> <output_tsv>" % argv[0]); exit(1)
+        print("USAGE: %s <input_guestlist> <output_tsv>" % argv[0], file=stderr); exit(1)
 
     # find missing data
     missing = dict()
